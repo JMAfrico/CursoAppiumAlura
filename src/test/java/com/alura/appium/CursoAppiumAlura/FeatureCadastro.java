@@ -6,15 +6,17 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
+import com.alura.appium.PageObjects.CadastroPageObject;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 
 public class FeatureCadastro 
 {
 	private AppiumDriver driver;
-	
+
 	public FeatureCadastro() throws MalformedURLException {
-		driver = AppiumDriverConfig.Instance().driver;
+		driver = AppiumDriverConfig.Instance().driver;	
 	}
 	
     @Test

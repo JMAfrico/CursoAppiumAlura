@@ -7,12 +7,13 @@ import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
 
 public class AppiumDriverConfig {
 	
-	public AppiumDriver driver;
+	public AppiumDriver<MobileElement> driver;
 	
 	private static AppiumDriverConfig getInstance;
 	
@@ -41,6 +42,12 @@ public class AppiumDriverConfig {
 
 		driver = new AppiumDriver<>(URLConexao,configuracoes);
 	}
+	
+	//@org.junit.After
+	//public void tearDown() {
+	//	driver.close();
+	//	driver.quit();
+	//}
 
 
 }
